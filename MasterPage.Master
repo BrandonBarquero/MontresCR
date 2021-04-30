@@ -1,0 +1,375 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Montres.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Montres</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+       
+       
+ <!--Home Panel-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootcards/1.1.1/css/bootcards-desktop.min.css"/>
+    <!--Icono-->
+    <link rel="Shortcut Icon" type="image/x-icon" href="assets/icons/icono.ico" />
+    <!--Estilos alertifyjs-->
+    <script src="alertifyjs/alertify.min.js"></script>
+    <link rel="stylesheet" href="alertifyjs/css/alertify.min.css" />
+    <link rel="stylesheet" href="alertifyjs/css/themes/default.min.css" />
+    <!--Iconos Material Design-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <script src="js/bootstrap.min.js"></script>
+    <!--Estilos propios-->
+    <link rel="stylesheet" href="css/style.css"/>
+     <!--Ajax-->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <!--Estilos tabla-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css"/>
+    <script src="js/cdn.datatables.js"></script>
+    <script src="js/cdn.datatables.net.js"></script>
+    <!--Bootstrap web-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous"/>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+
+
+      <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+
+
+    <script>
+        window.onload = function () {
+            $('#onload').fadeOut();
+            $('body').removeClass('hidden');
+        }
+    </script>
+
+
+    <div id="onload" class="centrado2">
+            <div class="loadingio-spinner-eclipse-yxv3uqjr4m9"><div class="ldio-eqwqxncoq2p">
+        <div></div>
+        </div></div>
+    </div>
+
+
+
+
+
+<style type="text/css">
+@keyframes ldio-eqwqxncoq2p {
+  0% { transform: rotate(0deg) }
+  50% { transform: rotate(180deg) }
+  100% { transform: rotate(360deg) }
+}
+.ldio-eqwqxncoq2p div {
+  position: absolute;
+  animation: ldio-eqwqxncoq2p 1s linear infinite;
+  width: 176.8px;
+  height: 176.8px;
+  top: 22.1px;
+  left: 22.1px;
+  border-radius: 50%;
+  box-shadow: 0 6.188000000000001px 0 0 #00adb5;
+  transform-origin: 88.4px 91.494px;
+}
+.loadingio-spinner-eclipse-yxv3uqjr4m9 {
+  width: 221px;
+  height: 221px;
+  display: inline-block;
+  overflow: hidden;
+  background: #ffffff;
+}
+.ldio-eqwqxncoq2p {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transform: translateZ(0) scale(1);
+        backface-visibility: hidden;
+        transform-origin: 0 0;
+    }
+
+.centrado2{
+        background-color: white;
+          height: 100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+    }
+    .hidden2 {
+         overflow: hidden;
+    }
+
+</style>
+
+
+
+
+
+      <form id="form1" runat="server">
+        <div>
+            <asp:Panel ID="Panel1" runat="server">
+             <header class="p-3 mb-3 border-bottom shadow" style="background-color: #222831; ">
+                  <div class="dropdown text-left">
+                    <a href="Home.aspx" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none" style="float:left;">
+                      <img src="assets/img/logo.png" alt="Montres"  width="90" height="35">
+                    </a>
+                    </div>
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                      
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="Home.aspx" class="nav-link px-2 link-secondary">Inicio</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Partes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item link-light" href="InsertarParte.aspx">Insertar Parte</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="List_Partes.aspx">Lista de Partes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Numero_Alternativo.aspx">Partes por número alternativo</a></li>
+                            </ul>
+                        </li>
+
+                         
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Registro de Usuarios
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="InsertarUsuario.aspx">Insertar Usuario</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="List_Usuarios.aspx">Lista de Usuarios</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Bitácora
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Entradas.aspx">Entradas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Salidas.aspx">Salidas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Devoluciones.aspx">Devolución</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Minimos.aspx" class="nav-link px-2 link-light">Mínimos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cotizaciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Realizar_Cotizacion.aspx">Realizar Cotización</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Historial_Cotizaciones.aspx">Historial de Cotizaciones</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Cotizaciones_Aprobadas.aspx">Cotizaciones Aprobadas</a></li>
+                            </ul>
+                        </li>
+                           <li><a href="Retirar_Parte.aspx" class="nav-link px-2 link-light">Retirar Parte</a></li>
+                    </ul>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#"><%=Session["Nombre"] as string%></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            
+                            <li class="tooltips-general exit-system-button" data-placement="bottom"><asp:Button UseSubmitBehavior="false" runat="server" OnClick="Logout" class="dropdown-item" text="Salir"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+            </asp:Panel>
+
+
+
+          
+
+
+             <asp:Panel ID="Panel2" runat="server">
+              <header class="p-3 mb-3 border-bottom shadow" style="background-color: #222831; ">
+                      <div class="dropdown text-left">
+                    <a href="Home.aspx" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none" style="float:left;">
+                      <img src="assets/img/logo.png" alt="Montres"  width="90" height="35">
+                    </a>
+                    </div>
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="Home.aspx" class="nav-link px-2 link-secondary">Inicio</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Partes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="InsertarParte.aspx">Insertar Parte</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="List_Partes.aspx">Lista de Partes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Numero_Alternativo.aspx">Partes por número alternativo</a></li>
+                            </ul>
+                        </li>
+
+                      
+                        
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Bitácora
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Entradas.aspx">Entradas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Salidas.aspx">Salidas</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Devoluciones.aspx">Devolución</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="Minimos.aspx" class="nav-link px-2 link-light">Mínimos</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cotizaciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Realizar_Cotizacion.aspx">Realizar Cotización</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Historial_Cotizaciones.aspx">Historial de Cotizaciones</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Cotizaciones_Aprobadas.aspx">Cotizaciones Aprobadas</a></li>
+                            </ul>
+                        </li>
+
+                           <li><a href="Retirar_Parte.aspx" class="nav-link px-2 link-light">Retirar Parte</a></li>
+                    </ul>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#"><%=Session["Nombre"] as string%></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="tooltips-general exit-system-button" data-href="CerrarSesion" data-placement="bottom"><asp:Button UseSubmitBehavior="false" runat="server" OnClick="Logout" class="dropdown-item" text="Salir"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+            </asp:Panel>
+
+
+             <asp:Panel ID="Panel3" runat="server">
+              <header class="p-3 mb-3 border-bottom shadow" style="background-color: #222831; ">
+                      <div class="dropdown text-left">
+                    <a href="Home.aspx" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none" style="float:left;">
+                      <img src="assets/img/logo.png" alt="Montres"  width="90" height="35">
+                    </a>
+                    </div>
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      
+
+                    <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                        <li><a href="Home.aspx" class="nav-link px-2 link-secondary">Inicio</a></li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Partes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              
+                                <li><a class="dropdown-item" href="List_Partes_Ventas.aspx">Lista de Partes</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Numero_Alternativo_Ventas.aspx">Partes por número alternativo</a></li>
+                            </ul>
+                        </li>
+
+                          <li class="nav-item dropdown">
+                            <a class="nav-link link-light dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Cotizaciones
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="Realizar_Cotizacion.aspx">Realizar Cotización</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Historial_Cotizaciones.aspx">Historial de Cotizaciones</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="Cotizaciones_Aprobadas.aspx">Cotizaciones Aprobadas</a></li>
+                            </ul>
+                        </li>
+
+                         
+                    
+                         </ul>
+
+                    <div class="dropdown text-end">
+                        <a href="#" class="d-block link-light text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/img/user.png" alt="mdo" width="32" height="32" class="rounded-circle">
+                        </a>
+                        <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                            <li><a class="dropdown-item" href="#"><%=Session["Nombre"] as string%></a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li class="tooltips-general exit-system-button" data-href="CerrarSesion" data-placement="bottom"><asp:Button UseSubmitBehavior="false" runat="server" OnClick="Logout" class="dropdown-item" text="Salir"/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+            </asp:Panel>
+
+
+
+              </div>
+          
+
+                 <asp:ScriptManager ID="scriptmanager1" runat="server" />
+
+                  <asp:UpdatePanel ID="SCPanel" runat="server">
+                  <ContentTemplate>
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                </ContentTemplate>
+                </asp:UpdatePanel>
+
+
+    </form>
+
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+            <p class="mb-1">&copy; 2019 Software O&B</p>
+        </footer>
+        <br>
+</body>
+        <script type="text/javascript">
+
+
+            function Perro() {
+                alertify.set('notifier', 'position', 'top-right');
+                alertify.error('Usuario o contraseña incorrecta');
+            };
+
+
+        </script>
+ 
+
+</html>
