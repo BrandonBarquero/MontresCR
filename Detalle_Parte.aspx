@@ -84,7 +84,7 @@
                                 <div class="form-group">
                                     <label for="alterno" class="col-sm-2 control-label">Número de Parte Alternativo</label>
                                     <div class="col-sm-4">
-                                        <asp:TextBox ID="Numero_Alternativo" runat="server" AutoPostBack = "true" type="text" class="form-control" placeholder="" required="" maxlength="70"/>
+                                        <asp:TextBox ID="Numero_Alternativo" runat="server" type="text" class="form-control" placeholder="" required="" maxlength="70"/>
                                     </div>
                                  <div class="col-sm-4">
                                         <asp:Button ID="_guardar" Text="Agregar" runat="server"  OnClick="Insertar_Alterno"  class="btn btn-outline-dark"/>  

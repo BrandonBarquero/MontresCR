@@ -19,7 +19,7 @@ namespace Montres.DAO
                 return objConexion;
             }
             objConexion = new SqlConnection();
-            objConexion.ConnectionString = "Data Source=localhost;Initial Catalog=SIMM ;User ID=Montres;Password=root;";
+            objConexion.ConnectionString = "Data Source=localhost;Initial Catalog=SIMM ;User ID=test;Password=root;";
             try
             {
                 objConexion.Open();

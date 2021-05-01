@@ -203,8 +203,8 @@ namespace Montres
                 Cancelar_B.Visible = false;
                 Button1.Visible = false;
                 Panel3.Visible = true;
-
-
+              
+                ddlPerfiles.Enabled = false;
 
 
             }
@@ -344,6 +344,9 @@ namespace Montres
 
         protected void Agregar_Parte(object sender, EventArgs e)
         {
+            if (ddlPerfiles.SelectedValue == "") {
+                return;
+            }
 
             Cancelar_B.Visible = true;
             Procesar_B.Visible = true;

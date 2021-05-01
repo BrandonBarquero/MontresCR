@@ -302,7 +302,10 @@ namespace Montres
 
         protected void Agregar_Parte(object sender, EventArgs e)
         {
-
+            if (ddlPerfiles.SelectedValue == "")
+            {
+                return;
+            }
             Cancelar_B.Visible = true;
             Finalizar_B.Visible = true;
 
